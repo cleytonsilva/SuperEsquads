@@ -1,0 +1,50 @@
+{
+  "name": "esquads-project",
+  "version": "4.0.0",
+  "description": "ESQUADS - Sistema de Educação Gamificada com IA",
+  "main": "index.js",
+  "scripts": {
+    "test": "node scripts/run-all-tests.js",
+    "test:unit": "node tests/unit/simple_test.js",
+    "test:integration": "npm run test:integration:env && npm run test:integration:signup",
+    "test:integration:env": "node tests/integration/test_env.js",
+    "test:integration:signup": "node tests/integration/test_signup_function.js",
+    "test:e2e": "node tests/e2e/test_runner.js all",
+    "test:e2e:auth": "node tests/e2e/test_runner.js auth",
+    "test:e2e:ai": "node tests/e2e/test_runner.js ai",
+    "test:e2e:payments": "node tests/e2e/test_runner.js payments",
+    "test:e2e:missions": "node tests/e2e/test_runner.js missions",
+    "test:e2e:advanced": "node tests/e2e/ultra_advanced_e2e_runner.js",
+    "test:e2e:completion": "node tests/e2e/ultimate_completion_e2e_runner.js",
+    "test:api": "powershell -ExecutionPolicy Bypass -File scripts/test_api.ps1",
+    "validate": "npm run test && npm run lint && npm run type-check",
+    "lint": "echo 'Executando ESLint...' && npm run lint --prefix esquads-dashboard",
+    "type-check": "echo 'Verificando TypeScript...' && npm run type-check --prefix esquads-dashboard",
+    "dev": "npm run dev --prefix esquads-dashboard",
+    "build": "npm run build --prefix esquads-dashboard",
+    "start": "npm run start --prefix esquads-dashboard",
+    "setup": "npm install && npm install --prefix esquads-dashboard",
+    "clean": "rm -rf node_modules esquads-dashboard/node_modules",
+    "reset": "npm run clean && npm run setup"
+  },
+  "keywords": [
+    "education",
+    "gamification",
+    "ai",
+    "nextjs",
+    "typescript",
+    "supabase",
+    "testing",
+    "e2e"
+  ],
+  "author": "ESQUADS Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cleytonsilva/SuperEsquads.git"
+  }
+}
