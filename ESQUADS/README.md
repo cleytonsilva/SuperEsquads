@@ -1,38 +1,37 @@
-# ESQUADS - Sistema de Gestão de Esquadrões de Segurança Cibernética
+# ESQUADS - Sistema de Gestão de Esquadrões
 
-## Visão Geral
-O ESQUADS é uma plataforma completa para gestão de esquadrões de segurança cibernética, oferecendo funcionalidades de dashboard, autenticação, gestão de usuários e muito mais.
+Sistema completo de gestão de esquadrões com dashboard administrativo, autenticação via Supabase e testes automatizados.
 
 ## Estrutura do Projeto
 
-### `/esquads-dashboard`
-Dashboard principal da aplicação construído com:
-- Next.js 14 (App Router)
-- TypeScript
-- Tailwind CSS
-- Supabase (Backend)
-- React Hook Form + Zod (Validação)
+- `esquads-dashboard/` - Frontend Next.js 14 com App Router
+- `supabase/` - Backend com Edge Functions e configurações
+- `tests/` - Testes unitários, integração e E2E
+- `docs/` - Documentação completa do projeto
 
-### `/esquads-landing-login`
-Página de landing e login da aplicação.
+## Tecnologias
 
-## Tecnologias Utilizadas
-
-- **Frontend:** Next.js 14, React, TypeScript
-- **Styling:** Tailwind CSS, Shadcn/ui
-- **Backend:** Supabase
-- **Autenticação:** Supabase Auth
-- **Validação:** Zod
-- **Testes:** Jest, Playwright
-- **Deploy:** Vercel
+- **Frontend:** Next.js 14, TypeScript, Tailwind CSS
+- **Backend:** Supabase, Edge Functions (Deno)
+- **Testes:** Jest, Playwright, E2E customizado
+- **Deploy:** Vercel + Supabase
 
 ## Como Executar
 
-1. Clone o repositório
-2. Instale as dependências: `npm install`
-3. Configure as variáveis de ambiente
-4. Execute o projeto: `npm run dev`
+```bash
+# Instalar dependências
+npm install
 
-## Documentação
+# Executar em desenvolvimento
+npm run dev
 
-Para mais informações, consulte a documentação completa em `/docs`.
+# Executar testes
+npm run test
+```
+
+## Status
+
+✅ Dashboard funcional
+✅ Autenticação implementada
+✅ Testes E2E configurados
+✅ Documentação atualizada
